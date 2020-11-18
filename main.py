@@ -4,9 +4,7 @@ from confluent_kafka import Producer, KafkaError
 import json
 import ccloud_lib
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # Read arguments and configurations and initialize
 
     # config_file = "-f F:\pythonProject\pythonProject1\resources\ccloud_config.config"
     #topic = " -t pythontest1"
@@ -33,9 +31,6 @@ if __name__ == '__main__':
     delivered_records = 0
 
 
-    # Optional per-message on_delivery handler (triggered by poll() or flush())
-    # when a message has been successfully delivered or
-    # permanently failed delivery (after retries).
     def acked(err, msg):
         global delivered_records
         """Delivery report handler called on
